@@ -1,0 +1,8 @@
+model.ckpt
+.DS_Store
+make_emoji_preds/src/annotations/*
+make_mosaics/tiles/*
+scraped_images
+tiles.pickle
+make_mosaics/bigman.png
+instagram-scraper.log
