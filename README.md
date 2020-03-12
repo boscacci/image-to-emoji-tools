@@ -1,5 +1,7 @@
 # Instagram Relevant Emoji Tiler
 
+Takes an image, finds semantically relevant emojis, then makes a collage/mosaic of the original image...but made out of the semantically relevant emojis!
+
 A hacky mashup of other people's hard work:
 
 ["Emoji-Language Image Captioning with Convolutional Neural Networks" (Ian Scott Knight, Rayne Hernandez)](https://github.com/ianscottknight/Emoji-Language-Image-Captioning-with-Convolutional-Neural-Networks)
@@ -13,3 +15,5 @@ And then:
 Self-explanatory. I feel like the hardest part is making your new custom tiles all color balanced to RGB(240,240,240) and having the final generated tile colors come out right.
 
 <img src="images/dirkjanpiersma.jpg" width="40%"> <img src="images/flower_mosaic.png" width="40%">
+
+[Follow this on instagram](https://www.instagram.com/image_to_emoji_mosaic/)
