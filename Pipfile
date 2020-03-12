@@ -9,6 +9,8 @@ verify_ssl = true
 tqdm = "*"
 requests = "*"
 opencv-python = "*"
+torch = "*"
+torchvision = "*"
 
 [requires]
 python_version = "3.7"

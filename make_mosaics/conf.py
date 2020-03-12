@@ -4,7 +4,7 @@
 # DEPTH = 4 -> 4 * 4 * 4 = 64 colors
 DEPTH = 4
 # list of rotations, in degrees, to apply over the original image
-ROTATIONS = [0]
+ROTATIONS = [0,90]
 
 
 #############################
