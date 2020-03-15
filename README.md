@@ -14,11 +14,10 @@ And then:
 
 Self-explanatory. I feel like the hardest part is making your new custom tiles all color balanced to RGB(240,240,240) and having the final generated tile colors come out right.
 
-<img src="images/dirkjanpiersma.jpg" width="40%">\
-<img src="images/flower_mosaic.png" width="40%">
-<img src="images/rude.jpg" width="40%">\
-<img src="images/rude_mosaic.png" width="40%">
-<img src="images/valley.jpg" width="40%">\
-<img src="images/valley_mosaic.png" width="40%">
+<img src="images/dirkjanpiersma.jpg" width="40%"><img src="images/flower_mosaic.png" width="40%">
+
+<img src="images/rude.jpg" width="40%"><img src="images/rude_mosaic.png" width="40%">
+
+<img src="images/valley.jpg" width="40%"><img src="images/valley_mosaic.png" width="40%">
 
 [Follow this on instagram](https://www.instagram.com/image_to_emoji_mosaic/)
