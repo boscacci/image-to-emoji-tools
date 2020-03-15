@@ -17,12 +17,15 @@ Self-explanatory. I feel like the hardest part is making your new custom tiles a
 Emoji predictor selects the emoji to tile with:
 
 🌸 🌸 🌸
+
 <img src="images/dirkjanpiersma.jpg" width="40%"> <img src="images/flower_mosaic.png" width="40%">
 
 🐶 🐶 🐶
+
 <img src="images/rude.jpg" width="40%"> <img src="images/rude_mosaic.png" width="40%">
 
 🐏, 🌄, and 🏔️
+
 <img src="images/valley.jpg" width="40%"> <img src="images/valley_mosaic.png" width="40%">
 
 [Follow this on instagram](https://www.instagram.com/image_to_emoji_mosaic/)
