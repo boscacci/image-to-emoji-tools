@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import torch
+import os
+
 import numpy as np
+from PIL import Image
+import torch
 from torchvision import transforms
 from torch.autograd import Variable
 import torch.nn.functional as F
@@ -11,16 +14,6 @@ import torch.nn.functional as F
 from utils import ConvNet
 from utils import int_to_emoji_dict
 from utils import NUM_CLASSES
-
-from PIL import Image
-
-MODEL_NAME = "make_emoji_preds/model.ckpt"
-
-device = "cpu"
-model = ConvNet(NUM_CLASSES).to(device)
-model.load_state_dict(
-    torch.load(MODEL_NAME, map_location=lambda storage, loc: storage)
-)
 
 imsize = 256
 
@@ -55,6 +48,28 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument("--filenames", "-f", help="filenames", nargs="*")
+parser.add_argument("--directory", "-d", help="dir name")
 filenames = parser.parse_args().filenames
+directory = parser.parse_args().directory
 
-[print(filename, ": ", make_pred(filename), "\n") for filename in filenames]
+MODEL_NAME = "make_emoji_preds/model.ckpt"
+
+device = "cpu"
+model = ConvNet(NUM_CLASSES).to(device)
+model.load_state_dict(
+    torch.load(MODEL_NAME, map_location=lambda storage, loc: storage)
+)
+
+if directory != None:
+    for root, dirs, files in os.walk(directory):
+        path = root.split(os.sep)
+        print((len(path) - 1) * "---", os.path.basename(root))
+        for file in files:
+            # import pdb
+
+            # pdb.set_trace()
+            print(
+                len(path) * "---", file, ": ", make_pred("/".join([root, file]))
+            )
+else:
+    [print(filename, ": ", make_pred(filename), "\n") for filename in filenames]

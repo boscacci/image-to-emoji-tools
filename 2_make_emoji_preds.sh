@@ -1,5 +1,4 @@
 #!/bin/bash
 
-python make_emoji_preds/single_image.py -f \
-"scraped_images/ellietheminiween/ween.jpg" \
-"scraped_images/dirkjanpiersma/rosy.jpg"
+python make_emoji_preds/make_preds.py -d \
+"scraped_images"
