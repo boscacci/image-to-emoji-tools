@@ -4,13 +4,13 @@ Takes an image, finds semantically relevant emojis, then makes a collage/mosaic 
 
 A hacky mashup of other people's hard work:
 
-["Emoji-Language Image Captioning with Convolutional Neural Networks" (Ian Scott Knight, Rayne Hernandez)](https://github.com/ianscottknight/Emoji-Language-Image-Captioning-with-Convolutional-Neural-Networks)
+1. [Rarcega's Instagram Scraper.](https://github.com/rarcega/instagram-scraper)
+
+2. ["Emoji-Language Image Captioning with Convolutional Neural Networks" (Ian Scott Knight, Rayne Hernandez)](https://github.com/ianscottknight/Emoji-Language-Image-Captioning-with-Convolutional-Neural-Networks)
 
 I downloaded the COCO dataset and some other (word2vec) stuff, installed Ubuntu on my hackintosh in order to run Torch in CUDA mode (to train in less than a day), and fix some typos and directory mismatch stuff in the Stanford repo in order to train and save the "model.ckpt" which drives emoji predictions. There wasn't an obvious way to make new predictions on a single image so I cobbled together a small .py script to accept one new image at a time for prediction.
- 
-And then:
 
-[Nuno Faria's "Tiler"](https://github.com/nuno-faria/tiler)
+3. [Nuno Faria's "Tiler"](https://github.com/nuno-faria/tiler)
 
 Self-explanatory. I feel like the hardest part is making your new custom tiles all color balanced to RGB(240,240,240) and having the final generated tile colors come out right.
 
