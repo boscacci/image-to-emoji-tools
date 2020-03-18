@@ -7,4 +7,5 @@ python instagram_scraper/app.py \
 --maximum 15 \
 --media-types image \
 --destination scraped_images/ \
+--retain-username \
 --template '{username}_{year}-{month}-{day}'

@@ -19,7 +19,7 @@ def make_unicode(ascii_emoji):
 
 
 def make_png(unicode_str):
-    with open("emojidict.pickle", "rb") as pickle_file:
+    with open("make_mosaics/emojidict.pickle", "rb") as pickle_file:
         emoji_webpage = pickle.load(pickle_file).text
     soup = bs(emoji_webpage, "html.parser")
 
@@ -50,4 +50,4 @@ unic = make_unicode(ascii_emoji)
 im = make_png(unic)
 tinted = tint_image(im)
 # tinted.show()
-tinted.save(f"tiles/{unic}.png")
+tinted.save(f"make_mosaics/tiles/{unic}.png")
