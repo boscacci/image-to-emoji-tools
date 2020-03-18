@@ -4,7 +4,7 @@
 # DEPTH = 4 -> 4 * 4 * 4 = 64 colors
 DEPTH = 4
 # list of rotations, in degrees, to apply over the original image
-ROTATIONS = [0,90]
+ROTATIONS = [0, 90]
 
 
 #############################
@@ -15,7 +15,7 @@ ROTATIONS = [0,90]
 # number of colors per image
 COLOR_DEPTH = 32
 # tiles scales (1 = default resolution)
-RESIZING_SCALES = [0.1, .09, .08, .07, .05]
+RESIZING_SCALES = [0.5, 0.4, 0.3, 0.2, 0.1]
 # number of pixels shifted to create each box (tuple with (x,y))
 # if value is None, shift will be done accordingly to tiles dimensions
 PIXEL_SHIFT = (5, 5)
@@ -27,7 +27,7 @@ RENDER = False
 POOL_SIZE = 8
 
 # out file name
-OUT = 'out.png'
+OUT = "out.png"
 # image to tile (ignored if passed as the 1st arg)
 IMAGE_TO_TILE = None
 # folder with tiles (ignored if passed as the 2nd arg)

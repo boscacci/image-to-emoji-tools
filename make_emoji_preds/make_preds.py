@@ -65,9 +65,6 @@ if directory != None:
         path = root.split(os.sep)
         print((len(path) - 1) * "---", os.path.basename(root))
         for file in files:
-            # import pdb
-
-            # pdb.set_trace()
             print(
                 len(path) * "---", file, ": ", make_pred("/".join([root, file]))
             )
