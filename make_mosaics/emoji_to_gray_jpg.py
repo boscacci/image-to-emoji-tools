@@ -40,7 +40,7 @@ def tint_image(src, color=(240, 240, 240)):
     src.load()
     r, g, b, alpha = src.split()
     gray = ImageOps.grayscale(src)
-    result = ImageOps.colorize(gray, (210, 210, 210, 0), color)
+    result = ImageOps.colorize(gray, (230, 230, 230, 0), color)
     result.putalpha(alpha)
     return result
 
