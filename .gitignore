@@ -13,3 +13,4 @@ make_mosaics/tiles/*
 scraped_images
 tiles.pickle
 instagram-scraper.log
+out.png
