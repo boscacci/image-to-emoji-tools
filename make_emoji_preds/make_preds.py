@@ -65,8 +65,14 @@ if directory != None:
         path = root.split(os.sep)
         print((len(path) - 1) * "---", os.path.basename(root))
         for file in files:
-            print(
-                len(path) * "---", file, ": ", make_pred("/".join([root, file]))
-            )
+            if file != ".DS_Store":
+                print(
+                    len(path) * "---",
+                    file,
+                    ": ",
+                    make_pred("/".join([root, file])),
+                )
 else:
-    [print(filename, ": ", make_pred(filename), "\n") for filename in filenames]
+    for filename in filenames:
+        if file != ".DS_Store":
+            print(filename, ": ", make_pred(filename), "\n")

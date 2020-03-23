@@ -50,4 +50,6 @@ unic = make_unicode(ascii_emoji)
 im = make_png(unic)
 tinted = tint_image(im)
 # tinted.show()
+if not os.path.exists("make_mosaics/tiles"):
+    os.makedirs("make_mosaics/tiles")
 tinted.save(f"make_mosaics/tiles/{unic}.png")
