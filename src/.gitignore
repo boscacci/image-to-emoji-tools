@@ -1,0 +1,8 @@
+annotations
+model.ckpt
+current_image
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
