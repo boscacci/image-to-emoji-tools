@@ -19,4 +19,4 @@ Image of valley yields mosaic made of 🐏, 🌄, and 🏔️ emojis:
 
 ## 2. Image to Emoji API:
 
-A basic API that enables the public to `POST` an image and receive the 5 most semantically relevant emojis as a response.
+A basic flask API that enables the public to `POST` an image and receive the 5 most semantically relevant emojis as a response. The dependencies for this to work (PyTorch, trained model) are too large to deploy this directly as Lambda functions, as far as I know, so it's on the shelf for now.
