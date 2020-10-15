@@ -3,15 +3,18 @@
 
 import argparse
 import os
+import pickle
 
 import numpy as np
 from PIL import Image
-import torch
+
 from torchvision import transforms
+
 from torch.autograd import Variable
+from torch import from_numpy
 import torch.nn.functional as F
 
-from utils import ConvNet
+# from utils import ConvNet
 from utils import int_to_emoji_dict
 from utils import NUM_CLASSES
 
@@ -22,18 +25,11 @@ MODEL_NAME = "model.ckpt"
 device = "cpu"
 
 
-# def get_ckpt():
-#     bucket = boto3.resource("s3").Bucket("image-emoji-resources-zappa")
-#     lambda_local_filepath = "/tmp/model.ckpt"
-#     bucket.download_file("model.ckpt", lambda_local_filepath)
-#     return lambda_local_filepath
-
-
 def make_pred(image_path):
-    model = ConvNet(NUM_CLASSES).to(device)
-    model.load_state_dict(
-        torch.load(MODEL_NAME, map_location=lambda storage, loc: storage)
-    )
+    filehandler = open("trained_emoji_model.obj", "rb")
+    model = pickle.load(filehandler)
+    filehandler.close()
+    ###
     img = image_loader(image_path)
     model.eval()
     inputs = Variable(img).to(device)
@@ -53,7 +49,7 @@ def image_loader(image_path):
         [transforms.Resize((256, 256)), transforms.ToTensor()]
     )
     image = np.expand_dims(preprocess(image), 0)
-    tensor = torch.from_numpy(image)
+    tensor = from_numpy(image)
     return tensor
 
 

@@ -34,7 +34,10 @@ def upload_file():
                 application.config["UPLOAD_FOLDER"], "current_image"
             )
             file.save(filepath)
+
             from make_preds import make_pred
+
+            print(f"Filepath: {filepath}")
 
             return str(make_pred(filepath))
             # return redirect(url_for("uploaded_file", filename=filename))
